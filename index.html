@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#09080e">
+<title>LuminaCraft | Yetkili Başvurusu</title>
+<style>
+:root {
+  color-scheme: dark;
+  --bg: #09080e;
+  --panel: #12101b;
+  --purple: #a855f7;
+  --border: #38244e;
+  --muted: #b9b1c8;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: radial-gradient(ellipse at top, #211333 0, var(--bg) 55%);
+  color: #f6f3ff;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+header {
+  padding: 30px 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  background: #09080ecc;
+}
+header h1 {
+  margin: 0;
+  color: #c084fc;
+  letter-spacing: 4px;
+}
+header p { margin-bottom: 0; color: var(--muted); }
+main { max-width: 780px; margin: 35px auto; padding: 0 18px; }
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: clamp(20px, 5vw, 34px);
+  box-shadow: 0 15px 60px #0006;
+}
+h2 { margin-top: 0; }
+.intro { color: var(--muted); line-height: 1.6; }
+label {
+  display: block;
+  margin: 21px 0 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+input, textarea, select {
+  display: block;
+  width: 100%;
+  padding: 13px;
+  background: #0b0911;
+  color: white;
+  border: 1px solid #423052;
+  border-radius: 9px;
+  font: inherit;
+}
+input:focus, textarea:focus, select:focus {
+  outline: 2px solid var(--purple);
+  border-color: var(--purple);
+}
+textarea { min-height: 100px; resize: vertical; }
+button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 25px;
+  border: 0;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #9333ea, #a855f7);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover { filter: brightness(1.12); }
+button:disabled { opacity: .65; cursor: wait; }
+#notice { line-height: 1.6; overflow-wrap: anywhere; }
+footer { text-align: center; color: #81758f; padding: 25px; font-size: 13px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>LUMINACRAFT</h1>
+  <p>Yetkili ve Medya Başvuru Merkezi</p>
+</header>
+
+<main>
+<section class="card">
+  <h2>Yetkili Başvurusu</h2>
+  <p class="intro">
+    Formu dikkatlice doldur. Başvurundaki bilgilerin doğru olduğundan emin ol.
+  </p>
+
+  <form id="application">
+    <label for="name_age">1. Adınız, soyadınız ve yaşınız</label>
+    <input id="name_age" name="name_age" maxlength="150" required>
+
+    <label for="discord">2. Discord adınız ve kullanıcı ID'niz</label>
+    <input id="discord" name="discord" maxlength="150" required>
+
+    <label for="communication">3. Oyuncularla etkili iletişim kurmanın yolu nedir?</label>
+    <textarea id="communication" name="communication" maxlength="3000"></textarea>
+
+    <label for="daily_time">4. Günlük ayırabileceğiniz süre</label>
+    <input id="daily_time" name="daily_time" maxlength="100" required>
+
+    <label for="microphone">5. Aktif mikrofonunuz var mı?</label>
+    <select id="microphone" name="microphone" required>
+      <option value="">Seçiniz</option>
+      <option>Evet</option>
+      <option>Hayır</option>
+    </select>
+
+    <label for="device">6. Sunucuya hangi cihazdan giriyorsunuz?</label>
+    <select id="device" name="device" required>
+      <option value="">Seçiniz</option>
+      <option>Mobil</option>
+      <option>Bilgisayar</option>
+    </select>
+
+    <label for="category">7. Başvurmak istediğiniz kategori</label>
+    <select id="category" name="category" required>
+      <option value="">Seçiniz</option>
+      <option>PraticePvP</option>
+      <option>BoxPvP</option>
+      <option>SMP</option>
+      <option>Discord</option>
+      <option>Milenyum</option>
+    </select>
+
+    <label for="skill">8. Oyun modu bilginizi 10 üzerinden puanlayın</label>
+    <select id="skill" name="skill" required>
+      <option value="">Seçiniz</option>
+      <option>1</option><option>2</option><option>3</option>
+      <option>4</option><option>5</option><option>6</option>
+      <option>7</option><option>8</option><option>9</option>
+      <option>10</option>
+    </select>
+
+    <label for="motivation">9. Neden yetkili veya medya olmak istiyorsunuz?</label>
+    <textarea id="motivation" name="motivation" maxlength="3000" required></textarea>
+
+    <label for="experience">10. Önceki sunucu ve görev deneyiminiz</label>
+    <textarea id="experience" name="experience" maxlength="3000" required></textarea>
+
+    <label for="conflict">11. Oyuncular arasındaki anlaşmazlığı nasıl çözersiniz?</label>
+    <textarea id="conflict" name="conflict" maxlength="3000"></textarea>
+
+    <label for="teamwork">12. Takım çalışmasına yatkın mısınız? Özellikleriniz</label>
+    <textarea id="teamwork" name="teamwork" maxlength="3000" required></textarea>
+
+    <label for="department">13. Görev almak istediğiniz bölüm</label>
+    <select id="department" name="department" required>
+      <option value="">Seçiniz</option>
+      <option>Medya Ekibi</option>
+      <option>Rehber Ekibi</option>
+      <option>AAC</option>
+      <option>Destek Ekibi</option>
+      <option>Discord Ekibi</option>
+    </select>
+
+    <label for="about">14. Son olarak kendinizden bahsedin</label>
+    <textarea id="about" name="about" maxlength="3000" required></textarea>
+
+    <label for="links">15. Medya iseniz kanal bağlantılarınız</label>
+    <textarea id="links" name="links" maxlength="1500"
+      placeholder="YouTube, TikTok vb. bağlantılar"></textarea>
+
+    <button type="submit" id="submitButton">Başvuruyu Gönder</button>
+    <p id="notice" role="status" aria-live="polite"></p>
+  </form>
+</section>
+</main>
+
+<footer>© LuminaCraft — Yetkili Başvuru Sistemi</footer>
+
+<script>
+const API_URL =
+  "https://luminacraft-basvuru-api.erenozyar04.workers.dev/basvuru";
+
+const form = document.getElementById("application");
+const button = document.getElementById("submitButton");
+const notice = document.getElementById("notice");
+
+form.addEventListener("submit", async function(event) {
+  event.preventDefault();
+
+  if (!form.reportValidity()) return;
+
+  const data = Object.fromEntries(new FormData(form).entries());
+
+  button.disabled = true;
+  button.textContent = "Gönderiliyor...";
+  notice.textContent = "Başvurun gönderiliyor...";
+
+  try {
+    const response = await fetch(API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+
+    let result;
+    try {
+      result = await response.json();
+    } catch {
+      throw new Error("Sunucudan geçerli yanıt alınamadı.");
+    }
+
+    if (!response.ok || !result.success) {
+      throw new Error(result.message || "Başvuru kaydedilemedi.");
+    }
+
+    notice.textContent = "Başvurun başarıyla kaydedildi!";
+    form.reset();
+  } catch (error) {
+    notice.textContent =
+      "Başvuru gönderilemedi. API adresini ve veritabanı bağlantısını kontrol et. (" +
+      error.message + ")";
+  } finally {
+    button.disabled = false;
+    button.textContent = "Başvuruyu Gönder";
+  }
+});
+</script>
+</body>
+</html>
